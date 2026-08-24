@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabd Jeet Singh | Developer & AI/ML Enthusiast</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Particle Grid -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Shabd</span>
+                <span class="logo-accent">.JS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Leadership & Hackathons</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-sm btn-outline">Let's Connect</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Available for Opportunities & Collabs</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Shabd Jeet Singh</span>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="static-txt">I am a </span>
+                        <span class="dynamic-txt" id="typewriter"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+                    <p class="hero-desc">
+                        B.Tech CS (AIML) 2nd Year undergraduate at <strong>GLA University, Mathura</strong>, originally from <strong>Ghaziabad</strong>. Passionate about crafting next-generation frontend interfaces, exploring Artificial Intelligence & Machine Learning, and building high-impact tech solutions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get in Touch</span>
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:shabd@example.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="cyber-card">
+                        <div class="cyber-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">developer_profile.json</span>
+                        </div>
+                        <div class="code-block">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Shabd Jeet Singh"</span>,
+  <span class="code-prop">origin</span>: <span class="code-str">"Ghaziabad, India"</span>,
+  <span class="code-prop">university</span>: <span class="code-str">"GLA University, Mathura"</span>,
+  <span class="code-prop">degree</span>: <span class="code-str">"B.Tech CS (AIML) - 2nd Year"</span>,
+  <span class="code-prop">currentCPI</span>: <span class="code-num">6.8</span>,
+  <span class="code-prop">hackathons</span>: <span class="code-num">5</span>,
+  <span class="code-prop">leadership</span>: [
+    <span class="code-str">"VP, Volleyball Club"</span>,
+    <span class="code-str">"Anti-Ragging Committee"</span>
+  ],
+  <span class="code-prop">loves</span>: [<span class="code-str">"Frontend Magic"</span>, <span class="code-str">"AI & ML"</span>, <span class="code-str">"Sports"</span>]
+};</code></pre>
+                        </div>
+                        <div class="card-badges">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="5">5</span>
+                                <span class="stat-label">Hackathons</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">92%</span>
+                                <span class="stat-label">10th Grade</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">VP</span>
+                                <span class="stat-label">Sports Leader</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Get to Know Me</p>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Passionate Developer</h3>
+                        <p>
+                            Enthusiastic programmer with a strong foundation in languages like <strong>C, Python, Java</strong>, and modern <strong>Web Technologies</strong>. I love turning complex algorithmic concepts into responsive, user-friendly frontend experiences.
+                        </p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>AIML Undergraduate</h3>
+                        <p>
+                            Specializing in <strong>Artificial Intelligence & Machine Learning</strong> in my 2nd Year at GLA University. Driven by how intelligent data pipelines and modern web user interfaces intersect to create impactful products.
+                        </p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>Team Player & Leader</h3>
+                        <p>
+                            Serving as the <strong>Vice President of the Volleyball Club</strong> and an active member of the <strong>Anti-Ragging Squad</strong>. Proven track record in collaborative hackathons, competitive team coordination, and student community safety.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Academic Journey Section -->
+        <section class="section education-section" id="education">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">My Academic Track Record</p>
+                    <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- GLA University -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta">
+                                <span class="timeline-badge">2023 - Present</span>
+                                <span class="timeline-tag">Undergraduate</span>
+                            </div>
+                            <h3>B.Tech in Computer Science (AIML)</h3>
+                            <h4 class="institute-name"><i class="fa-solid fa-graduation-cap"></i> GLA University, Mathura</h4>
+                            <p class="grade-highlight">Current CPI: <span class="highlight-val">6.8 / 10.0</span> (2nd Year)</p>
+                            <p class="timeline-desc">
+                                Specializing in AI & Machine Learning, Data Structures & Algorithms, Object-Oriented Programming, and Full Stack Web Development. Active campus participant in hackathons, university clubs, and leadership activities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 12th Grade -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta">
+                                <span class="timeline-badge">2021 - 2023</span>
+                                <span class="timeline-tag">Senior Secondary (12th)</span>
+                            </div>
+                            <h3>Higher Secondary Education (PCM)</h3>
+                            <h4 class="institute-name"><i class="fa-solid fa-school"></i> St. Teresa's School</h4>
+                            <p class="grade-highlight">Score: <span class="highlight-val">76%</span></p>
+                            <p class="timeline-desc">
+                                Completed senior secondary education with focus on Physics, Chemistry, and Mathematics, cultivating analytical problem-solving and computer science fundamentals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 10th Grade -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-meta">
+                                <span class="timeline-badge">2020 - 2021</span>
+                                <span class="timeline-tag">Secondary (10th)</span>
+                            </div>
+                            <h3>Secondary School Certificate</h3>
+                            <h4 class="institute-name"><i class="fa-solid fa-school"></i> St. Teresa's School</h4>
+                            <p class="grade-highlight">Score: <span class="highlight-val">92%</span> (Distinction)</p>
+                            <p class="timeline-desc">
+                                Achieved exceptional academic distinction with 92% marks, actively participating in science fairs, sports tournaments, and co-curricular events.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Technical Proficiency</p>
+                    <h2 class="section-title">My <span class="gradient-text">Skillset</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Languages -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-header">
+                            <i class="fa-solid fa-terminal category-icon"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <div class="skill-tag"><i class="fa-solid fa-c"></i> C Language</div>
+                            <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
+                            <div class="skill-tag"><i class="fa-brands fa-java"></i> Java</div>
+                            <div class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+                            <div class="skill-tag"><i class="fa-solid fa-code"></i> C++ Basics</div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Development -->
+                    <div class="skill-category-card glass-panel featured-category">
+                        <div class="category-header">
+                            <i class="fa-solid fa-palette category-icon"></i>
+                            <h3>Frontend & UI/UX</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+                            <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3 / SCSS</div>
+                            <div class="skill-tag"><i class="fa-brands fa-js"></i> Modern JavaScript</div>
+                            <div class="skill-tag"><i class="fa-brands fa-react"></i> React.js</div>
+                            <div class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive Web Design</div>
+                            <div class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> CSS Animations & Flexbox/Grid</div>
+                            <div class="skill-tag"><i class="fa-solid fa-brush"></i> UI/UX Design Principles</div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & AI/ML -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-header">
+                            <i class="fa-solid fa-server category-icon"></i>
+                            <h3>Backend, AI/ML & Databases</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <div class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js Basics</div>
+                            <div class="skill-tag"><i class="fa-solid fa-plug"></i> RESTful APIs</div>
+                            <div class="skill-tag"><i class="fa-solid fa-database"></i> SQL / Relational DBs</div>
+                            <div class="skill-tag"><i class="fa-solid fa-brain"></i> Machine Learning Concepts</div>
+                            <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> Data Analysis (NumPy/Pandas)</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Leadership -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="category-header">
+                            <i class="fa-solid fa-toolbox category-icon"></i>
+                            <h3>Tools & Soft Skills</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <div class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+                            <div class="skill-tag"><i class="fa-solid fa-laptop-code"></i> VS Code</div>
+                            <div class="skill-tag"><i class="fa-solid fa-users"></i> Team Leadership</div>
+                            <div class="skill-tag"><i class="fa-solid fa-lightbulb"></i> Problem Solving</div>
+                            <div class="skill-tag"><i class="fa-solid fa-volleyball"></i> Athletic Discipline</div>
+                            <div class="skill-tag"><i class="fa-solid fa-comments"></i> Technical Communication</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Portfolio Showcase</p>
+                    <h2 class="section-title">Featured <span class="gradient-text">Frontend Projects</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="interactive">Interactive Apps</button>
+                    <button class="filter-btn" data-filter="dashboard">Dashboards & UI</button>
+                    <button class="filter-btn" data-filter="creative">Creative Portfolios</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: AI Prompt & Vision Lab Frontend -->
+                    <div class="project-card glass-panel" data-category="interactive">
+                        <div class="project-img-wrapper">
+                            <div class="project-preview-mockup ai-mockup">
+                                <div class="mockup-header">
+                                    <span class="mock-dot"></span>
+                                    <span class="mock-title">NeuralVision AI Hub</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mock-ai-orb"></div>
+                                    <div class="mock-lines">
+                                        <div class="mock-line glow-line"></div>
+                                        <div class="mock-line short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#contact" class="preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3/Neon</span>
+                                <span>JavaScript</span>
+                                <span>AI UI</span>
+                            </div>
+                            <h3 class="project-title">NeuralVision - AI Hub Interface</h3>
+                            <p class="project-desc">
+                                A modern, cyberpunk-themed frontend interface for AI prompt engineering and image synthesis simulation. Features responsive glassmorphic cards, dynamic prompt builders, and interactive canvas particle triggers.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" class="proj-link demo-link"><i class="fa-solid fa-bolt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Apex Sports & Volleyball Championship Portal -->
+                    <div class="project-card glass-panel" data-category="dashboard">
+                        <div class="project-img-wrapper">
+                            <div class="project-preview-mockup sports-mockup">
+                                <div class="mockup-header">
+                                    <span class="mock-dot"></span>
+                                    <span class="mock-title">VolleyPulse Sports Dashboard</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mock-stats-row">
+                                        <div class="stat-pill">GLA 25</div>
+                                        <div class="stat-pill accent">VS</div>
+                                        <div class="stat-pill">OPP 21</div>
+                                    </div>
+                                    <div class="mock-chart-bar"></div>
+                                </div>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#contact" class="preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>CSS Grid</span>
+                                <span>Analytics UI</span>
+                                <span>Sports</span>
+                            </div>
+                            <h3 class="project-title">VolleyPulse - Sports Tournament Hub</h3>
+                            <p class="project-desc">
+                                Inspired by my role as Volleyball Club VP, this frontend portal manages live match scoreboards, player stats, tournament brackets, and team schedule tracking with dynamic DOM updates.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" class="proj-link demo-link"><i class="fa-solid fa-bolt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: CyberStore E-Commerce Frontend -->
+                    <div class="project-card glass-panel" data-category="interactive">
+                        <div class="project-img-wrapper">
+                            <div class="project-preview-mockup store-mockup">
+                                <div class="mockup-header">
+                                    <span class="mock-dot"></span>
+                                    <span class="mock-title">CyberTech Gear Hub</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mock-product-grid">
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#contact" class="preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Vanilla JS</span>
+                                <span>CSS Flexbox</span>
+                                <span>Cart Logic</span>
+                            </div>
+                            <h3 class="project-title">CyberTech - Modern E-Commerce UI</h3>
+                            <p class="project-desc">
+                                Responsive high-tech storefront featuring interactive product filtering, instant cart management with LocalStorage, fluid micro-interactions, and checkout simulation.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" class="proj-link demo-link"><i class="fa-solid fa-bolt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: DevFolio Ultra & Code Playground -->
+                    <div class="project-card glass-panel" data-category="creative">
+                        <div class="project-img-wrapper">
+                            <div class="project-preview-mockup folio-mockup">
+                                <div class="mockup-header">
+                                    <span class="mock-dot"></span>
+                                    <span class="mock-title">Web Code Editor Studio</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="mock-editor-pane">
+                                        <span class="mock-code-line blue"></span>
+                                        <span class="mock-code-line cyan"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#contact" class="preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>HTML/CSS/JS</span>
+                                <span>Code Runner</span>
+                                <span>UI Design</span>
+                            </div>
+                            <h3 class="project-title">CodeLab - Realtime Frontend Sandbox</h3>
+                            <p class="project-desc">
+                                In-browser live HTML/CSS/JavaScript editor with split-screen instant live rendering, syntax highlight simulation, and one-click code exporter.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" class="proj-link demo-link"><i class="fa-solid fa-bolt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience, Hackathons & Leadership Section -->
+        <section class="section experience-section" id="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Beyond The Classroom</p>
+                    <h2 class="section-title">Leadership & <span class="gradient-text">Achievements</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="leadership-grid">
+                    <!-- Hackathons -->
+                    <div class="leadership-card glass-panel">
+                        <div class="card-badge-top">5x Hackathons</div>
+                        <div class="lead-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>5x Hackathon Participant</h3>
+                        <p class="lead-sub">Collegiate & National Level Hackathons</p>
+                        <p class="lead-desc">
+                            Competed in 5 intensive hackathons, collaborating in cross-functional teams under tight deadlines. Designed intuitive frontend solutions, pitched product prototypes, and solved real-world algorithmic problems.
+                        </p>
+                        <ul class="lead-bullets">
+                            <li><i class="fa-solid fa-check text-blue"></i> Rapid prototyping & interactive frontend development</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Pitching UI/UX flows and software architectures</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Agile team collaboration & fast Git workflows</li>
+                        </ul>
+                    </div>
+
+                    <!-- Volleyball Club VP -->
+                    <div class="leadership-card glass-panel">
+                        <div class="card-badge-top">Executive Position</div>
+                        <div class="lead-icon"><i class="fa-solid fa-volleyball"></i></div>
+                        <h3>Vice President - Volleyball Club</h3>
+                        <p class="lead-sub">GLA University Athletics & Sports Council</p>
+                        <p class="lead-desc">
+                            Leading university-level volleyball operations, mentoring players, organizing inter-college tournaments, and cultivating sportsmanship, discipline, and high-pressure decision making.
+                        </p>
+                        <ul class="lead-bullets">
+                            <li><i class="fa-solid fa-check text-blue"></i> Organizing university-wide sports fests and trials</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Leadership, time management & strategic coordination</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Mentoring junior athletes and promoting fitness</li>
+                        </ul>
+                    </div>
+
+                    <!-- Anti-Ragging Committee -->
+                    <div class="leadership-card glass-panel">
+                        <div class="card-badge-top">Campus Safety</div>
+                        <div class="lead-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Anti-Ragging Squad Member</h3>
+                        <p class="lead-sub">GLA University Disciplinary Committee</p>
+                        <p class="lead-desc">
+                            Actively upholding student well-being and disciplinary guidelines, ensuring a safe, welcoming, and harassment-free campus atmosphere for freshers and the university community.
+                        </p>
+                        <ul class="lead-bullets">
+                            <li><i class="fa-solid fa-check text-blue"></i> Campus vigilance and fostering student inclusivity</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Resolving student grievances and proactive communication</li>
+                            <li><i class="fa-solid fa-check text-blue"></i> Collaborating with faculty and administration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-subtitle">Get In Touch</p>
+                    <h2 class="section-title">Let's Build <span class="gradient-text">Something Great</span></h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info-panel glass-panel">
+                        <h3>Connect With Me</h3>
+                        <p class="contact-intro">
+                            Whether you're looking to collaborate on a hackathon project, discuss frontend opportunities, or simply connect over technology and sports — feel free to reach out!
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <span class="info-label">Name</span>
+                                    <span class="info-value">Shabd Jeet Singh</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="info-label">Location</span>
+                                    <span class="info-value">Ghaziabad / Mathura, UP</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-university"></i></div>
+                                <div>
+                                    <span class="info-label">University</span>
+                                    <span class="info-value">GLA University, Mathura</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <span class="info-value">shabdjeetsingh@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social-pills">
+                            <a href="https://github.com" target="_blank" class="social-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+                            <a href="https://linkedin.com" target="_blank" class="social-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://instagram.com" target="_blank" class="social-pill"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel glass-panel">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Collaboration / Hackathon / Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Hi Shabd, let's talk about..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="form-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#hero" class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Shabd</span>
+                    <span class="logo-accent">.JS</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-quote">"Building the future with code, discipline, and intelligence."</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Shabd Jeet Singh. Designed & Built with HTML, CSS & JS.</p>
+                <div class="footer-links">
+                    <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
